@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/brick-sans');
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 * {
   margin: 0;
@@ -147,7 +147,7 @@ body {
   border-radius: 50px;
   background: linear-gradient(135deg, #444, #333);
   color: #fff;
-  font-family: 'Brick Sans', sans-serif;
+  font-family: 'Anton';
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
