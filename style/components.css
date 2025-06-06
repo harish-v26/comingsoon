@@ -1,0 +1,53 @@
+.hackslogo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hackslogo:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #444, #333);
+    color: #fff;
+    font-family: Anton;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #00ffff, #00cccc);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.tagline{
+    font-family: Antono;
+}
+
+.content h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin: 0.3em 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #00ffff;
+}  

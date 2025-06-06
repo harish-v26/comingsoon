@@ -1,0 +1,184 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .corner-sphere {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+    .top-left { 
+      top: -75px; 
+      left: -75px; 
+    }
+    
+    .top-right { 
+      top: -75px; 
+      right: -75px; 
+    }
+    
+    .bottom-left { 
+      bottom: -75px; 
+      left: -75px; 
+    }
+    
+    .bottom-right { 
+      bottom: -75px; 
+      right: -75px; 
+    }
+
+    .logo-section {
+      min-height: 35vh;
+      padding: 1.5rem 1rem;
+    }
+
+    .logo-space {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+
+    .content-section {
+      padding: 1.5rem 1rem;
+      gap: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    .girl-placeholder {
+      left: 2%;
+      width: clamp(150px, 25vw, 200px);
+      height: clamp(200px, 25vh, 300px);
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Small Mobile Styles */
+  @media (max-width: 480px) {
+    .corner-sphere {
+      width: 120px !important;
+      height: 120px !important;
+    }
+
+    .top-left { 
+      top: -60px; 
+      left: -60px; 
+    }
+    
+    .top-right { 
+      top: -60px; 
+      right: -60px; 
+    }
+    
+    .bottom-left { 
+      bottom: -60px; 
+      left: -60px; 
+    }
+    
+    .bottom-right { 
+      bottom: -60px; 
+      right: -60px; 
+    }
+
+    .logo-section {
+      min-height: 30vh;
+      padding: 1rem;
+    }
+
+    .logo-space {
+      padding: 1rem;
+      gap: 0.8rem;
+    }
+
+    .content-section {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .girl-placeholder {
+      display: none; /* Hide on very small screens for better UX */
+    }
+  }
+
+  /* Large Desktop Styles */
+  @media (min-width: 1200px) {
+    .corner-sphere {
+      width: 400px !important;
+      height: 400px !important;
+    }
+
+    .girl-placeholder{
+      top: 200px;
+    }
+    .top-left { 
+      top: -150px; 
+      left: -180px; 
+    }
+    
+    .top-right { 
+      top: -150px; 
+      right: -180px; 
+    }
+    
+    .bottom-left { 
+      bottom: -200px; 
+      left: -150px; 
+    }
+    
+    .bottom-right { 
+      bottom: -200px; 
+      right: -150px; 
+    }
+
+    .logo-space {
+      max-width: 600px;
+      padding: 3rem;
+    }
+
+    .tagline{
+      font-size: 46px;
+    }
+
+    .high1{
+      padding-left: 240px;
+    }
+
+    .tag2{
+      padding-left: 150px;
+    }
+
+    .high2{
+      padding-left: 270px;
+    }
+    .btn {
+      padding: 1.2rem 3rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Landscape Mobile */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .logo-section {
+      flex: 1;
+      min-height: auto;
+    }
+
+    .content-section {
+      flex: 1;
+      min-height: auto;
+    }
+
+    .girl-placeholder {
+      display: none;
+    }
+  }

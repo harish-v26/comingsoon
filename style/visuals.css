@@ -1,0 +1,55 @@
+.background-wave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #111, #000);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+  
+.corner-sphere {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.corner-sphere canvas {
+    display: block;
+}
+
+.top-left,.top-right,.bottom-left,.bottom-right { 
+    top: -100px; 
+    left: -100px; 
+    width: 200px;
+    height: 200px;
+}
+
+.girl-placeholder {
+    position: absolute;
+    left: 5%;
+    width: clamp(200px, 20vw, 250px);
+    height: clamp(300px, 30vh, 400px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+.corner-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+}

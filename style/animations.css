@@ -1,0 +1,24 @@
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.logo-space, .main-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.main-content {
+    animation-delay: 0.2s;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  } 

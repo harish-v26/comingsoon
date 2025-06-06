@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEC HACKS COMING SOON</title>
+    <!-- <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/circle-animation.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/decorations.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/visuals.css"> -->
+    <link rel="stylesheet" href="style/style1.css">
+    <style>
+        /* Internal style for background*/ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #111 0%, #000 70%);
+        }
+
+        .geometric-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .line {
+            position: absolute;
+            background: linear-gradient(45deg, transparent, #333, transparent);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .line:nth-child(1) {
+            top: 10%;
+            left: -10%;
+            width: 30%;
+            height: 1px;
+            transform: rotate(15deg);
+            animation-delay: 0s;
+        }
+
+        .line:nth-child(2) {
+            top: 20%;
+            right: -10%;
+            width: 25%;
+            height: 1px;
+            transform: rotate(-25deg);
+            animation-delay: 1s;
+        }
+
+        .line:nth-child(3) {
+            top: 60%;
+            left: -5%;
+            width: 35%;
+            height: 1px;
+            transform: rotate(35deg);
+            animation-delay: 2s;
+        }
+
+        .line:nth-child(4) {
+            bottom: 20%;
+            right: -10%;
+            width: 40%;
+            height: 1px;
+            transform: rotate(-15deg);
+            animation-delay: 3s;
+        }
+
+        .flowing-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+        }
+
+        .wave-line {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        .wave-line:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 0s;
+        }
+
+        .wave-line:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 0.5s;
+        }
+
+        .wave-line:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 1s;
+        }
+
+        .wave-line:nth-child(4) {
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 1.5s;
+        }
+
+        .corner-polygons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .polygon {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: rotate 20s linear infinite;
+        }
+
+        .polygon-1 {
+            top: 5%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .polygon-2 {
+            top: 10%;
+            right: 10%;
+            width: 60px;
+            height: 60px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation-direction: reverse;
+        }
+
+        .polygon-3 {
+            bottom: 15%;
+            left: 8%;
+            width: 70px;
+            height: 70px;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        }
+
+        .polygon-4 {
+            bottom: 10%;
+            right: 15%;
+            width: 90px;
+            height: 90px;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            animation-direction: reverse;
+            animation-duration: 25s;
+        }
+
+        .connecting-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dot {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: twinkle 4s ease-in-out infinite;
+        }
+
+        .dot:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+        .dot:nth-child(2) { top: 25%; right: 25%; animation-delay: 0.5s; }
+        .dot:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 1s; }
+        .dot:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 1.5s; }
+        .dot:nth-child(5) { top: 40%; left: 80%; animation-delay: 2s; }
+        .dot:nth-child(6) { top: 70%; left: 25%; animation-delay: 2.5s; }
+
+        .spiral-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            animation: spiralRotate 15s linear infinite;
+        }
+
+        .spiral {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        .spiral:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spiral:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: spiralRotate 12s linear infinite reverse;
+        }
+
+        .spiral:nth-child(3) {
+            width: 350px;
+            height: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                opacity: 0.3;
+                transform: translateY(0px) rotate(var(--rotation, 0deg));
+            }
+            50% { 
+                opacity: 0.8;
+                transform: translateY(-20px) rotate(var(--rotation, 0deg));
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 0.1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.3;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes spiralRotate {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flowing-wave {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .spiral-lines {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        
+        <div class="geometric-lines">
+            <div class="line" style="--rotation: 15deg;"></div>
+            <div class="line" style="--rotation: -25deg;"></div>
+            <div class="line" style="--rotation: 35deg;"></div>
+            <div class="line" style="--rotation: -15deg;"></div>
+        </div>
+
+        
+        <div class="flowing-wave">
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+        </div>
+
+        
+        <div class="corner-polygons">
+            <div class="polygon polygon-1"></div>
+            <div class="polygon polygon-2"></div>
+            <div class="polygon polygon-3"></div>
+            <div class="polygon polygon-4"></div>
+        </div>
+
+        
+        <div class="connecting-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        
+        <div class="spiral-lines">
+            <div class="spiral"></div>
+            <div class="spiral"></div>
+            <div class="spiral"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo-section">
+          <div class="logo-space">
+            <img src="./assets/pechackslogo.png" alt="PEC Hacks Logo" class="hackslogo">
+            <a href="#" class="btn" onclick="handleCommunityClick()">COMMUNITY &#8594;</a>
+          </div>
+        </div>
+        <div class="girl-placeholder">
+            <img src="./assets/girlwithlaptop.png" alt="" height="300px">
+        </div>
+        
+        <div class="content-section">
+            <div class="tech-circle">
+                <div class="outer-dotted-1"></div>
+                <div class="outer-dotted-2"></div>
+                <div class="outer-solid"></div>
+            
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+                <div class="circle-5"></div>
+            
+                
+                <div class="corner-dot dot-1"></div>
+                <div class="corner-dot dot-2"></div>
+                <div class="corner-dot dot-3"></div>
+                <div class="corner-dot dot-4"></div>
+                <div class="corner-dot dot-5"></div>
+                <div class="corner-dot dot-6"></div>
+                <div class="corner-dot dot-7"></div>
+                <div class="corner-dot dot-8"></div>
+            </div>
+            <div class="main-content">
+                <h2 class="tagline">HACK <br><span class="highlight high1">IDEAS</span></h2>
+                <h2 class="tagline tag2">BUILD <br><span class="highlight high2">FUTURES</span></h2>
+                <div>
+                  <a href="#" class="btn" onclick="handlePreRegisterClick()">PRE-REGISTER HERE &#8594; </a>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+    <div class="corner-sphere top-left"></div>
+    <div class="corner-sphere top-right"></div>
+    <div class="corner-sphere bottom-left"></div>
+    <div class="corner-sphere bottom-right"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+</html>

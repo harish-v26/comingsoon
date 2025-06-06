@@ -1,0 +1,91 @@
+.tech-circle {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-dotted-1,
+  .outer-dotted-2,
+  .outer-solid,
+  .tech-circle::before,
+  .tech-circle::after,
+  .circle-3,
+  .circle-4,
+  .circle-5 {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer-dotted-1 {
+    width: 180px;
+    height: 180px;
+    border: 2px dotted #ffffff;
+    animation: spin-clockwise 12s linear infinite;
+}
+
+.outer-dotted-2 {
+    width: 160px;
+    height: 160px;
+    border: 2px dotted #ffffff;
+    animation: spin-counter 16s linear infinite;
+}
+
+.outer-solid {
+    width: 140px;
+    height: 140px;
+    border: 2px solid #ffffff;
+    animation: spin-clockwise 20s linear infinite;
+}
+
+.tech-circle::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border: 4px dashed #ffffff;
+    animation: spin-counter 24s linear infinite;
+}
+
+.tech-circle::after {
+    content: '';
+    width: 102px;
+    height: 102px;
+    border: 3px dashed #ffffff;
+    animation: spin-clockwise 18s linear infinite;
+}
+
+.circle-3 {
+    width: 84px;
+    height: 84px;
+    border: 3px dashed #ffffff;
+    animation: spin-counter 22s linear infinite;
+}
+
+.circle-4 {
+    width: 66px;
+    height: 66px;
+    border: 2px dashed #ffffff;
+    animation: spin-clockwise 26s linear infinite;
+}
+
+.circle-5 {
+    width: 48px;
+    height: 48px;
+    border: 2px dashed #ffffff;
+    animation: spin-counter 28s linear infinite;
+  }
+
+  @keyframes spin-clockwise {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes spin-counter {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(-360deg); }
+  }
