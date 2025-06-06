@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/brick-sans');
+
 * {
   margin: 0;
   padding: 0;
@@ -418,7 +420,7 @@ body {
   }
 
   .girl-placeholder {
-    display: none; /* Hide on very small screens for better UX */
+    display: none; 
   }
 
   .tech-circle{
